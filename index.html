@@ -832,16 +832,20 @@
               <div class="grid">
                 <div class="one-half push--large--one-quarter medium-down--one-whole">
                   <div class="contact-form">
-                    <form action="">
+
+                    <form action="https://formspree.io/hello@butterstudio.nyc" method="POST">
                       <div>
-                        <input type="text" placeholder="name" />
+                        <input type="text" placeholder="name" name="name" />
                       </div>
                       <div>
-                        <input type="email" placeholder="email" />
+                        <input type="email" placeholder="email" name="_replyto" />
                       </div>
                       <div class="contact-message">
                         <label for="message">message</label>
-                        <textarea name="message" rows="10"></textarea>
+                        <textarea name="message" rows="10" name="message"></textarea>
+                      </div>
+                      <div class="contact-submit">
+                        <input type="submit" value="Send">
                       </div>
                     </form>
 

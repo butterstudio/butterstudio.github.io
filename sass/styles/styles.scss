@@ -496,7 +496,7 @@ h2 {
     text-align: center;
   }
 
-  input {
+  input[type="email"], input[type="text"] {
     border: 0;
     outline: none;
     border-bottom: 2px solid black;
@@ -516,6 +516,24 @@ h2 {
     }
     &:-moz-placeholder { /* Firefox 18- */
       color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  input[type="submit"] {
+    border: 0;
+    outline: none;
+    border: 2px solid black;
+    padding: 15px 15px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: black;
+      color: white;
     }
   }
 
