@@ -1600,6 +1600,14 @@ h2 {
 .page {
   height: 100vh;
 }
+a {
+  color: inherit;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
 .text {
   display: -webkit-box;
   display: -ms-flexbox;
