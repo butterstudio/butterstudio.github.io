@@ -726,7 +726,8 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 }
 
 .wrapper {
-    width: $grid-large;
+    // width: $grid-large;
+    width: 1400px;
     margin: auto;
     max-width: 100%;
     padding: 0 30px;

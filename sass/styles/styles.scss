@@ -1,47 +1,35 @@
 @font-face {
     font-family: 'GT Sectra Fine Trial';
-    src: url('../fonts/GTSectraFineTrial-Regular.eot');
-    src: url('../fonts/GTSectraFineTrial-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/GTSectraFineTrial-Regular.woff2') format('woff2'),
-        url('../fonts/GTSectraFineTrial-Regular.woff') format('woff'),
-        url('../fonts/GTSectraFineTrial-Regular.ttf') format('truetype'),
-        url('../fonts/GTSectraFineTrial-Regular.svg#GTSectraFineTrial-Regular') format('svg');
+    src: url('../fonts/GT-Sectra-Fine-Regular.eot');
+    src: url('../fonts/GT-Sectra-Fine-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GT-Sectra-Fine-Regular.woff2') format('woff2'),
+        url('../fonts/GT-Sectra-Fine-Regular.woff') format('woff'),
+        url('../fonts/GT-Sectra-Fine-Regular.ttf') format('truetype'),
+        url('../fonts/GT-Sectra-Fine-Regular.svg#GT-Sectra-Fine-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Transcript Trial';
-    src: url('../fonts/TranscriptTrial-Bold.eot');
-    src: url('../fonts/TranscriptTrial-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/TranscriptTrial-Bold.woff2') format('woff2'),
-        url('../fonts/TranscriptTrial-Bold.woff') format('woff'),
-        url('../fonts/TranscriptTrial-Bold.ttf') format('truetype'),
-        url('../fonts/TranscriptTrial-Bold.svg#TranscriptTrial-Bold') format('svg');
+    src: url('../fonts/transcript-bold.eot');
+    src: url('../fonts/transcript-bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transcript-bold.woff2') format('woff2'),
+        url('../fonts/transcript-bold.woff') format('woff'),
+        url('../fonts/transcript-bold.ttf') format('truetype'),
+        url('../fonts/transcript-bold.svg#transcript-bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Fortescue Trial';
-    src: url('../fonts/FortescueTrial-Regular.eot');
-    src: url('../fonts/FortescueTrial-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/FortescueTrial-Regular.woff2') format('woff2'),
-        url('../fonts/FortescueTrial-Regular.woff') format('woff'),
-        url('../fonts/FortescueTrial-Regular.ttf') format('truetype'),
-        url('../fonts/FortescueTrial-Regular.svg#FortescueTrial-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Transcript Trial';
-    src: url('../fonts/TranscriptTrial-Regular.eot');
-    src: url('../fonts/TranscriptTrial-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/TranscriptTrial-Regular.woff2') format('woff2'),
-        url('../fonts/TranscriptTrial-Regular.woff') format('woff'),
-        url('../fonts/TranscriptTrial-Regular.ttf') format('truetype'),
-        url('../fonts/TranscriptTrial-Regular.svg#TranscriptTrial-Regular') format('svg');
+    src: url('../fonts/transcript-regular.eot');
+    src: url('../fonts/transcript-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transcript-regular.woff2') format('woff2'),
+        url('../fonts/transcript-regular.woff') format('woff'),
+        url('../fonts/transcript-regular.ttf') format('truetype'),
+        url('../fonts/transcript-regular.svg#transcript-regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -443,9 +431,40 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 
   h2 {
     text-transform: uppercase;
+  }
+}
+
+.popup-header-text {
+  font-family: 'GT Sectra Fine Trial';
+
+  @include media-query($large) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  @include media-query($medium-down) {
+    order: 10;
+    width: 100%;
+    padding: 30px 0 0;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -570,7 +589,7 @@ a {
 }
 
 .popup-image {
-  padding-right: 50px;
+  // padding-right: 50px;
 
   img {
     display: block;
@@ -584,6 +603,10 @@ a {
   outline: none;
 }
 
+.popup-slider {
+  margin-bottom: 60px !important;
+}
+
 .popup-news-item {
   h3 {
     font-family: 'Transcript Trial';
@@ -592,7 +615,7 @@ a {
     line-height: 1.45em;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin: 0 0 30px;
+    margin: 0 0 22px;
   }
 
   p {
@@ -600,7 +623,19 @@ a {
     font-size: 14px;
     line-height: 1.8em;
     letter-spacing: 0.03em;
-    margin: 0 0 30px;
+    margin: 0 0 22px;
+
+    // &:last-of-type {
+    //   margin-bottom: 0;
+    // }
+  }
+}
+
+.popup-news-credits {
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -609,8 +644,12 @@ a {
   // padding: 0 0 50px;
 }
 
+.slick-arrow {
+  bottom: -60px;
+}
+
 .slick-next {
-  right: -75px;
+  right: 10px;
 
   &:before {
     content: url("../images/right-chevron.svg");
@@ -618,7 +657,7 @@ a {
 }
 
 .slick-prev {
-  left: -75px;
+  left: 10px;
 
   &:before {
     content: url("../images/left-chevron.svg");
@@ -627,7 +666,13 @@ a {
 
 .slick-arrow {
   height: auto;
+  top: auto;
+  -webkit-transform: none;transform: none;
   //
   // @include media-query($medium-down) {
   // }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

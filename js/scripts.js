@@ -1,17 +1,20 @@
 // Docs at http://simpleweatherjs.com
 $(document).ready(function() {
-  $.simpleWeather({
-    location: 'Brooklyn, NY',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = weather.temp+'&deg; F / '+weather.alt.temp+'&deg; C';
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html(error);
-    }
+
+  Weather.setApiKey("186a4121f9d2a98d277362cd4add0547");
+
+  Weather.getCurrent("Brooklyn", function(current) {
+
+    var w = Weather.kelvinToFahrenheit(current.temperature());
+    $("#weather").html(Math.round(w) + "&#176; F");
+
   });
+
+  // Weather.getForecast("Kansas City", function(forecast) {
+  //   console.log("forecast high: " + forecast.high());
+  //   console.log("forecast low: " + forecast.low());
+  // });
+
 
   // $('.popup-slider').on('init', function(event, slick){
   //     $("#news").hide();
