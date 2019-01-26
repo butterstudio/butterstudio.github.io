@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   Weather.setApiKey("186a4121f9d2a98d277362cd4add0547");
 
-  Weather.getCurrent("Brooklyn", function(current) {
+  Weather.getCurrent("Brooklyn, US", function(current) {
 
     var w = Weather.kelvinToFahrenheit(current.temperature());
     $("#weather").html(Math.round(w) + "&#176; F");
