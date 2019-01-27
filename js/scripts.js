@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     var w = Weather.kelvinToFahrenheit(current.temperature());
     $("#weather").html(Math.round(w) + "&#176; F");
-    console.log(w);
+    // console.log(w);
 
   });
 
