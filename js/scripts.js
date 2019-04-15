@@ -32,6 +32,23 @@ $(document).ready(function() {
     $(this).addClass("dot-hovered");
   });
 
+  const dest = window.location.hash;
+  switch (dest) {
+    case "#work":
+      openPopup(work);
+      break;
+    case "#contact":
+      openPopup(contact);
+      break;
+    case "#news":
+      openPopup(news);
+      break;
+    case "#services":
+      openPopup(services);
+      break;
+    default:
+      break;
+  }
 });
 
 document.addEventListener("touchstart", function(){}, true);
@@ -39,9 +56,11 @@ document.addEventListener("touchstart", function(){}, true);
 function openPopup(element) {
   $(".dots").addClass("hidden");
   $(element).removeClass("hidden");
+  window.location.hash = element.id;
 }
 
 function closePopup() {
   $(".dots").removeClass("hidden");
   $(".popup").addClass("hidden");
+  window.location.hash = "";
 }

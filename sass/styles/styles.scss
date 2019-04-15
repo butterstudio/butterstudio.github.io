@@ -535,6 +535,19 @@ a {
   }
 }
 
+.popup-work {
+  .popup-image {
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .popup-image-caption-right {
+    float: right;
+  }
+}
+
 .contact-form {
   input, label, textarea, p {
     display: block;
@@ -639,7 +652,7 @@ a {
     margin: 0 0 22px;
   }
 
-  p {
+  p, span {
     font-family: 'Transcript Trial';
     font-size: 14px;
     line-height: 1.8em;
