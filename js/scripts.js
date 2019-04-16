@@ -49,6 +49,23 @@ $(document).ready(function() {
     default:
       break;
   }
+
+  const $upArrow = $(".up-arrow");
+  $(window).on("scroll", function() {
+      var scrollPos = $(window).scrollTop();
+      if (scrollPos <= 0) {
+          $upArrow.addClass("hidden");
+      } else {
+          $upArrow.removeClass("hidden");
+      }
+  });
+
+  $upArrow.each(function() {
+    $(this).click(function() {
+        $('html,body').animate({ scrollTop: 0 }, 400);
+        return false;
+    });
+  });
 });
 
 document.addEventListener("touchstart", function(){}, true);

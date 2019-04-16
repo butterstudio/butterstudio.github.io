@@ -2475,6 +2475,13 @@ a:hover {
   padding: 0 0 25px;
   background: white;
 }
+.up-arrow {
+  width: 25px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  cursor: pointer;
+}
 .popup-list {
   padding-right: 20px;
 }

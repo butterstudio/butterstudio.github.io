@@ -504,6 +504,15 @@ a {
   background: white;
 }
 
+// TODO: add mobile style
+.up-arrow {
+  width: 25px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  cursor: pointer;
+}
+
 .popup-list {
   padding-right: 20px;
 
