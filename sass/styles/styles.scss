@@ -570,6 +570,34 @@ a {
     letter-spacing: 0.03em;
     max-width: 80%;
   }
+
+  p {
+    font-family: 'Transcript Trial';
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  .work-item {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  .credit-section {
+    margin-bottom: 25px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .work-statement {
+    font-family: 'Transcript Trial';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.45em;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
 
 .contact-form {

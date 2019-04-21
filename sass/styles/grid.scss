@@ -610,6 +610,11 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
     #{$prefix}nine-twelfths       { @extend #{$prefix}three-quarters; }
     #{$prefix}ten-twelfths        { @extend #{$prefix}five-sixths; }
     #{$prefix}eleven-twelfths     { margin-left:91.666%; @include silent-relative; }
+
+    /**
+     * Twentieth
+     */
+    #{$prefix}one-twentieth         { margin-left:5%; @include silent-relative; }
 }
 
 @if $push {

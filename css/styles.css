@@ -832,6 +832,9 @@ template {
 .push--eleven-twelfths {
   margin-left: 91.666%;
 }
+.push--one-twentieth {
+  margin-left: 5%;
+}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .push--small--one-whole {
     margin-left: 100%;
@@ -934,6 +937,9 @@ template {
   }
   .push--small--eleven-twelfths {
     margin-left: 91.666%;
+  }
+  .push--small--one-twentieth {
+    margin-left: 5%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1039,6 +1045,9 @@ template {
   .push--medium--eleven-twelfths {
     margin-left: 91.666%;
   }
+  .push--medium--one-twentieth {
+    margin-left: 5%;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .push--medium-down--one-whole {
@@ -1143,6 +1152,9 @@ template {
   .push--medium-down--eleven-twelfths {
     margin-left: 91.666%;
   }
+  .push--medium-down--one-twentieth {
+    margin-left: 5%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .push--large--one-whole {
@@ -1246,6 +1258,9 @@ template {
   }
   .push--large--eleven-twelfths {
     margin-left: 91.666%;
+  }
+  .push--large--one-twentieth {
+    margin-left: 5%;
   }
 }
 [class*="pull--"] {
@@ -2528,6 +2543,29 @@ a:hover {
   line-height: 1.45em;
   letter-spacing: 0.03em;
   max-width: 80%;
+}
+.popup-work-subpages p {
+  font-family: 'Transcript Trial';
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.popup-work-subpages .work-item {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+.popup-work-subpages .credit-section {
+  margin-bottom: 25px;
+}
+.popup-work-subpages .credit-section p {
+  margin: 0;
+}
+.popup-work-subpages .work-statement {
+  font-family: 'Transcript Trial';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.45em;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 .contact-form input, .contact-form label, .contact-form textarea, .contact-form p {
   display: block;
