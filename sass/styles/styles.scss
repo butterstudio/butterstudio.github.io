@@ -557,6 +557,18 @@ a {
 
   .work-item {
     padding-bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+.popup-work-subpages {
+  h3 {
+    font-family: 'Transcript Trial';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.45em;
+    letter-spacing: 0.03em;
+    max-width: 80%;
   }
 }
 

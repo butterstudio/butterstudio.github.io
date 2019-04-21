@@ -46,6 +46,9 @@ $(document).ready(function() {
     case "#services":
       openPopup(services);
       break;
+    case '#workSubpages':
+      openPopup(workSubpages);
+      break;
     default:
       break;
   }
