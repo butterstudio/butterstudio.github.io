@@ -2517,6 +2517,9 @@ a:hover {
 .popup-work .popup-image-caption-right {
   float: right;
 }
+.popup-work .work-item {
+  padding-bottom: 20px;
+}
 .contact-form input, .contact-form label, .contact-form textarea, .contact-form p {
   display: block;
   font-family: 'Transcript Trial';

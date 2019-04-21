@@ -504,7 +504,6 @@ a {
   background: white;
 }
 
-// TODO: add mobile style
 .up-arrow {
   width: 25px;
   position: fixed;
@@ -554,6 +553,10 @@ a {
   }
   .popup-image-caption-right {
     float: right;
+  }
+
+  .work-item {
+    padding-bottom: 20px;
   }
 }
 
