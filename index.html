@@ -923,7 +923,7 @@
           </div>
           <div class="popup-work">
             <div class="grid">
-              <div class="nine-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item">
+              <div class="nine-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item" onclick="closePopup(); goToWorkItem('flex');">
                 <div class="popup-image">
                   <img src="images/FLEX_5.jpg" />
                 </div>
@@ -951,7 +951,7 @@
                   </span>
                 </div>
               </div>
-              <div class="four-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item" onclick="closePopup(); openPopup(workSubpages);">
+              <div class="four-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item" onclick="closePopup(); goToWorkItem('kettner');">
                 <div class="popup-image">
                   <img src="images/KETTNER_ICE_CREAM_1200.jpg" />
                 </div>
@@ -966,7 +966,7 @@
               </div>
             </div>
             <div class="grid">
-              <div class="nine-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item">
+              <div class="nine-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item" onclick="closePopup(); goToWorkItem('alma');">
                 <div class="popup-image">
                   <img src="images/ALMA_COCO_1200.jpg" />
                 </div>
@@ -993,7 +993,7 @@
         </div>
 
         <div id="workSubpages" class="popup popup-work-subpages hidden">
-          <div class="popup-slider">
+          <div class="popup-slider" id="work-slide">
             <div class="popup-slide">
               <div class="popup-header">
                 <h3>KETTNER COFFEE SUPPLY // A Tattoo Worthy Identity</h3>
@@ -1095,12 +1095,12 @@
                 </div>
               </div>
               <div class="grid">
-                <div class="five-elevenths grid__item medium-down--one-whole work-item">
+                <div class="five-elevenths grid__item medium-down work-item">
                   <div class="popup-image">
                     <img src="images/KETTNER_4_v.gif" />
                   </div>
                 </div>
-                <div class="five-elevenths grid__item push--large--one-eleventh medium-down--one-whole work-item">
+                <div class="five-elevenths grid__item push--one-eleventh medium-down work-item">
                   <div class="popup-image">
                     <img src="images/KETTNER_5_v.jpg" />
                   </div>
@@ -1122,94 +1122,66 @@
               </div>
             </div>
             <div class="popup-slide">
-              <div class="grid">
-                <div class="grid__item one-third medium-down--one-whole">
-                  <div class="popup-news-item">
-                    <h3>Other Half Brewing // Crafting Beer Labels and Brews</h3>
-                    <p>Other Half Brewing was born of a vision to brew New York beer with the effort and thoughtfulness representative of the “Other Half” of the industry. Today, Other Half creates craft beers in Brooklyn while collaborating with other breweries, local and global. Elevating their craft with every partnership, Other Half brings the hopped fruits of their labor back to the Brooklyn taproom. We completed packaging for a select number of Other Half’s short run brews—a limited supply of beers produced in collaboration with partner breweries—building off of Other Half’s quirky, bright, poppy yet minimal, brand. Creating cheeky illustrations, like dolphins and dentures for a Florida retiree-themed brew, and metallic labels for some added tactile pizazz, we designed packaging as unique as their Other Half’s brews. Made for the enjoyment of beer aficionados everywhere.</p>
-                    <p><strong>CREDITS</strong> // Client: Other Half Brewing / Creative Direction: Megan Pennman / Design, Illustration: Cari Sekendur</p>
-                    <p class="uppercase"><strong>illustration / packaging design</strong></p>
-                  </div>
-                </div>
-                <div class="grid__item seven-twelfths push--large--one-twelfth medium-down--one-whole">
-                  <div class="popup-image">
-                    <img src="images/OH_1_1200_butter.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="popup-slide">
-              <div class="grid">
-                <div class="grid__item one-third medium-down--one-whole">
-                  <div class="popup-news-item">
-                    <h3>Kettner Coffee Supply // A tattoo-worthy identity</h3>
-                    <p>Kettner Coffee Supply is Nashville’s newest destination for titillating coffee, sweets, and subversion. Located in the east-end of Nashville, Tennessee, hospitality veteran and founder Hannah Schneider wanted to create a coffee shop unlike any she’d experienced before in quality and aesthetic.</p>
-                    <p>Butter rose to the challenge of developing an unexpected identity that satisfies Kettner’s appetite for something memorable. We created a risque identity replete with scantily clad illustrations and suggestive statements—tonally minimal with lively expression.</p>
-                    <p>The system touches key pieces of the Kettner Coffee experience from cheeky coffee cups to a thought-provoking menu and soft serve container, merchandise with illustrative innuendos, and ink on skin—the brand spoke to Schneider so much, she now has a tattoo of one of our illustrations and taglines. The identity creates an experience as tempting as sneaking out for a mid-afternoon coffee or savoring a forbidden treat.</p>
-                    <p><strong>CREDITS</strong> // Client: Kettner Coffee Supply / Creative Direction, Design, Illustration: Cari Sekendur / Copywriting: Cari Sekendur, Molly Carkeet</p>
-                    <p><strong>brand design / tone of voice / copywriting / illustration / packaging design</strong></p>
-                  </div>
-                </div>
-                <div class="grid__item seven-twelfths push--large--one-twelfth medium-down--one-whole">
-                  <div class="popup-image">
-                    <img src="images/KETTNER_1_1200_butter.jpg" />
-                  </div>
+              <div class="popup-header">
+                <h3>ALMA MATER RECORDS // A Music Label Modernized</h3>
+                <div class="x" onclick="closePopup(); openPopup(work);">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.3 26.3">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #000;
+                          stroke-miterlimit: 10;
+                          stroke-width: 3px;
+                        }
+                      </style>
+                    </defs>
+                    <title>x</title>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <line class="cls-1" x1="1.06" y1="1.06" x2="25.24" y2="25.24" />
+                        <line class="cls-1" x1="1.06" y1="25.24" x2="25.24" y2="1.06" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>
             <div class="popup-slide">
-              <div class="grid">
-                <div class="grid__item one-third medium-down--one-whole">
-                  <div class="popup-news-item">
-                    <h3>France // A Playful Photography Portfolio</h3>
-                    <p>France Olicard is a Cape Town based fashion editorial photographer with an eye for ethereal, authentic human moments. France sought a new website experience reflective of the boundary-pushing, playful nature of her work. Working with designer Heidi Chisholm, we immerse visitors in France’s photography through full-bleed images on the homepage. A minimalist grid structure was designed to house photos and videography by publication, within her digital portfolio. We brought illustrations to life through front-end animation, creating a flying bird on loading state. Like France’s photography, the site features a few fun Easter eggs; such as, a draggable bird illustration and memorial for Diego (the artist’s beloved bulldog). Our favorite: a 3D virtual image experience on the mobile landing page that captures South Africa’s glory.</p>
-                    <p><strong>CREDITS</strong> // Client: France Productions / Web Development: Robbie Sherrard / Creative Direction, Design, Illustration: Heidi Chisholm</p>
-                    <p><strong>web development</strong></p>
-                  </div>
-                </div>
-                <div class="grid__item seven-twelfths push--large--one-twelfth medium-down--one-whole">
-                  <div class="popup-image">
-                    <img src="images/france.png" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="popup-slide">
-              <div class="grid">
-                <div class="grid__item one-third medium-down--one-whole">
-                  <div class="popup-news-item">
-                    <h3>Alma Mater // A Music Label Modernized</h3>
-                    <p>Alma Mater Records, formerly “Hot Mom USA,” were in need of brand refresh that would harmonize the label with their ethos. The company wanted to preserve a mention of motherhood in the name through a sentiment more inclusive of the company’s values—feminists, LGBTQIA+ folks, and POC. We renamed the group Alma Mater, meaning “nourishing mother” in Latin. The name gave the brand an elevated image that resonates with youth culture, and stays true to the label’s maternal roots. The lions in the logo were inspired by the the Greek goddess Cybele, who was referred to as “alma mater” during ancient times. Cybele’s lion-drawn chariot would cue wild music and disorderly, ecstatic scenes wherever the goddess would go. We loved this idea of ecstatic disorder and carried it into the rest of the identity, using collage elements, illustration, and bright colors. </p>
-                    <div class="popup-news-credits">
-                      <p><strong>CREDITS</strong> // Client: Alma Mater Records / Creative Direction, Design, Illustration: Cari Sekendur</p>
-                      <p class="uppercase"><strong>brand design / naming / illustration / art direction</strong></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid__item seven-twelfths push--large--one-twelfth medium-down--one-whole">
-                  <div class="popup-image">
-                    <img src="images/alma@2x.png" />
-                  </div>
+              <div class="popup-header">
+                <h3>FLEX MUSSELS // A taste of the Canadian Coast</h3>
+                <div class="x" onclick="closePopup(); openPopup(work);">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.3 26.3">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #000;
+                          stroke-miterlimit: 10;
+                          stroke-width: 3px;
+                        }
+                      </style>
+                    </defs>
+                    <title>x</title>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <line class="cls-1" x1="1.06" y1="1.06" x2="25.24" y2="25.24" />
+                        <line class="cls-1" x1="1.06" y1="25.24" x2="25.24" y2="1.06" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>
-            <div class="popup-slide">
-              <div class="grid">
-                <div class="grid__item one-third medium-down--one-whole">
-                  <div class="popup-news-item">
-                    <h3>Buddish // Zen for the Modern World</h3>
-                    <p>Buddish is a deck of cards made up of philosophies, tools, perspectives, and practices influenced by Buddhist tradition, made easily digestible, through contemporary context. Vetted by experts in theology, each card comprises a teaching that can help us uncover our best selves in the face of life’s most fierce provocations. Ancient practices have been translated, conceptually and linguistically, into Western contexts. With a card for every week of the year, through a simple, conscious, and enjoyable exercise, this artful deck promotes self- and social-improvement—zen—for the modern world. Product coming soon.</p>
-                    <p><strong>CREDITS</strong> // Client: Lauren Zettler / Copywriter: Molly Carkeet / Illustrator: Sophie Argetsinger</p>
-                    <p class="uppercase"><strong>naming / tone of voice / brand manifesto / copywriting</strong></p>
-                  </div>
-                </div>
-                <div class="grid__item seven-twelfths push--large--one-twelfth medium-down--one-whole">
-                  <div class="popup-image">
-                    <img src="images/butter-buddish-1.png" />
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div class="up-arrow hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.62 13.43">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="type">
+                  <polygon points="11.31 0 22.62 11.31 20.5 13.43 11.31 4.24 2.12 13.43 0 11.31 11.31 0" />
+                </g>
+              </g>
+            </svg>
           </div>
         </div>
 

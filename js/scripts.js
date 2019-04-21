@@ -84,3 +84,20 @@ function closePopup() {
   $(".popup").addClass("hidden");
   window.location.hash = "";
 }
+
+function goToWorkItem(name) {
+  openPopup(workSubpages);
+  switch (name) {
+    case 'kettner':
+      $('#work-slide').slick('slickGoTo', 0);
+      break;
+    case 'alma':
+      $('#work-slide').slick('slickGoTo', 1);
+      break;
+    case 'flex':
+      $('#work-slide').slick('slickGoTo', 2);
+      break;
+    default:
+      break;
+  }
+}
