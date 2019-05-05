@@ -25,7 +25,9 @@ $(document).ready(function() {
     dots: false,
     infinite: true,
     slidesToShow: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    draggable: false,
+    swipe: false
   });
 
   $(".dot").mouseenter(function() {

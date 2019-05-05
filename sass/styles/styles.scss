@@ -575,6 +575,8 @@ a {
     font-family: 'Transcript Trial';
     font-size: 16px;
     line-height: 1.5em;
+    margin-bottom: 22px;
+    margin-top: 0px;
   }
 
   .work-item {
@@ -587,6 +589,10 @@ a {
 
     p {
       margin: 0;
+    }
+
+    .credit-section-bold {
+      font-weight: 700;
     }
   }
 

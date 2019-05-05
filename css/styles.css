@@ -2548,6 +2548,8 @@ a:hover {
   font-family: 'Transcript Trial';
   font-size: 16px;
   line-height: 1.5em;
+  margin-bottom: 22px;
+  margin-top: 0px;
 }
 .popup-work-subpages .work-item {
   padding-bottom: 20px;
@@ -2558,6 +2560,9 @@ a:hover {
 }
 .popup-work-subpages .credit-section p {
   margin: 0;
+}
+.popup-work-subpages .credit-section .credit-section-bold {
+  font-weight: 700;
 }
 .popup-work-subpages .work-statement {
   font-family: 'Transcript Trial';
