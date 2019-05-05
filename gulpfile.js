@@ -35,6 +35,20 @@ gulp.task('build-css', function() {
 		.pipe(gulp.dest(sassConfig.outputDirectory));
 });
 
+gulp.task('build-work-subpages-html', function () {
+  const alma = fs.readFileSync('html/work-subpages/_alma.html', 'utf8');
+  const flex = fs.readFileSync('html/work-subpages/_flex.html', 'utf8');
+  const kettner = fs.readFileSync('html/work-subpages/_kettner.html', 'utf8');
+  return gulp.src('html/work-subpages/_work-subpages.html')
+    .pipe(template({
+      alma,
+      kettner,
+      flex
+    }))
+    .pipe(htmlbeautify(beautifyOptions))
+    .pipe(gulp.dest('html/'));
+});
+
 gulp.task('build-html', function() {
   const contact = fs.readFileSync('html/_contact.html', 'utf8');
   const dots = fs.readFileSync('html/_dots.html', 'utf8');
@@ -67,4 +81,5 @@ gulp.task('build-html', function() {
 gulp.task('watch', function() {
 	gulp.watch('sass/*/*.scss', gulp.series('build-css'));
   gulp.watch('html/*.html', gulp.series('build-html'));
+  gulp.watch('html/work-subpages/*.html', gulp.series('build-work-subpages-html'));
 });
