@@ -99,6 +99,9 @@ function goToWorkItem(name) {
     case 'flex':
       $('#work-slide').slick('slickGoTo', 2);
       break;
+    case 'otherhalf':
+      $('#work-slide').slick('slickGoTo', 3);
+      break;  
     default:
       break;
   }
