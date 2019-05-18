@@ -101,7 +101,7 @@ function goToWorkItem(name) {
       break;
     case 'otherhalf':
       $('#work-slide').slick('slickGoTo', 3);
-      break;  
+      break;
     default:
       break;
   }

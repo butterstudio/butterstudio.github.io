@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const removeEmptyLines = require('gulp-remove-empty-lines');
 const template = require('gulp-template');
 const htmlbeautify = require('gulp-html-beautify');
+const htmlValidator = require('gulp-w3cjs');
 
 const sassConfig = {
 	inputDirectory: 'sass/*.scss',
@@ -84,4 +85,25 @@ gulp.task('watch', function() {
 	gulp.watch('sass/*/*.scss', gulp.series('build-css'));
   gulp.watch('html/*.html', gulp.series('build-html'));
   gulp.watch('html/work-subpages/*.html', gulp.series('build-work-subpages-html'));
+  gulp.watch('index.html', gulp.series('validate-html'));
+});
+
+const ERRORS_TO_IGNORE = [
+  'Duplicate ID',
+  'An “img” element must have an “alt” attribute'
+];
+
+gulp.task('validate-html', () => {
+  return gulp.src('index.html')
+    .pipe(htmlValidator({
+      verifyMessage: function(type, message) {
+        for (errorMsg of ERRORS_TO_IGNORE) {
+          if (message.indexOf(errorMsg) !== -1) {
+            return false;
+          }
+        }
+        return true;
+      }
+    }))
+    .pipe(htmlValidator.reporter())
 });
