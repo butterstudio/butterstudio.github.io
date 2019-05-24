@@ -21,6 +21,8 @@ $(document).ready(function() {
   //     $("#news").hide();
   // });
 
+  $(".popup-slider").on('beforeChange', scrollToTop);
+
   $(".popup-slider").slick({
     dots: false,
     infinite: true,
@@ -75,10 +77,15 @@ $(document).ready(function() {
 
 document.addEventListener("touchstart", function(){}, true);
 
+function scrollToTop() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
 function openPopup(element) {
   $(".dots").addClass("hidden");
   $(element).removeClass("hidden");
   window.location.hash = element.id;
+  scrollToTop();
 }
 
 function closePopup() {
