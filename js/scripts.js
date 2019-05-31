@@ -109,6 +109,9 @@ function goToWorkItem(name) {
     case 'otherhalf':
       $('#work-slide').slick('slickGoTo', 3);
       break;
+    case 'arkfoods':
+      $('#work-slide').slick('slickGoTo', 4);
+      break;      
     default:
       break;
   }

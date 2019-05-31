@@ -41,12 +41,14 @@ gulp.task('build-work-subpages-html', function () {
   const flex = fs.readFileSync('html/work-subpages/_flex.html', 'utf8');
   const kettner = fs.readFileSync('html/work-subpages/_kettner.html', 'utf8');
   const otherhalf = fs.readFileSync('html/work-subpages/_otherhalf.html', 'utf8');
+  const arkfoods = fs.readFileSync('html/work-subpages/_arkfoods.html', 'utf8');
   return gulp.src('html/work-subpages/_work-subpages.html')
     .pipe(template({
       alma,
       kettner,
       flex,
-      otherhalf
+      otherhalf,
+      arkfoods
     }))
     .pipe(htmlbeautify(beautifyOptions))
     .pipe(gulp.dest('html/'));
