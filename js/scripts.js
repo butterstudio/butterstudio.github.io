@@ -21,27 +21,98 @@ $(document).ready(function() {
   //     $("#news").hide();
   // });
 
+  $(".popup-slider").on('beforeChange', scrollToTop);
+
   $(".popup-slider").slick({
     dots: false,
     infinite: true,
     slidesToShow: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    draggable: false,
+    swipe: false
   });
 
   $(".dot").mouseenter(function() {
     $(this).addClass("dot-hovered");
   });
 
+  const dest = window.location.hash;
+  switch (dest) {
+    case "#work":
+      openPopup(work);
+      break;
+    case "#contact":
+      openPopup(contact);
+      break;
+    case "#news":
+      openPopup(news);
+      break;
+    case "#services":
+      openPopup(services);
+      break;
+    case '#workSubpages':
+      openPopup(workSubpages);
+      break;
+    default:
+      break;
+  }
+
+  const $upArrow = $(".up-arrow");
+  $(window).on("scroll", function() {
+      var scrollPos = $(window).scrollTop();
+      if (scrollPos <= 0) {
+          $upArrow.addClass("hidden");
+      } else {
+          $upArrow.removeClass("hidden");
+      }
+  });
+
+  $upArrow.each(function() {
+    $(this).click(function() {
+        $('html,body').animate({ scrollTop: 0 }, 400);
+        return false;
+    });
+  });
 });
 
 document.addEventListener("touchstart", function(){}, true);
 
+function scrollToTop() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
 function openPopup(element) {
   $(".dots").addClass("hidden");
   $(element).removeClass("hidden");
+  window.location.hash = element.id;
+  scrollToTop();
 }
 
 function closePopup() {
   $(".dots").removeClass("hidden");
   $(".popup").addClass("hidden");
+  window.location.hash = "";
+}
+
+function goToWorkItem(name) {
+  openPopup(workSubpages);
+  switch (name) {
+    case 'kettner':
+      $('#work-slide').slick('slickGoTo', 0);
+      break;
+    case 'alma':
+      $('#work-slide').slick('slickGoTo', 1);
+      break;
+    case 'flex':
+      $('#work-slide').slick('slickGoTo', 2);
+      break;
+    case 'otherhalf':
+      $('#work-slide').slick('slickGoTo', 3);
+      break;
+    case 'arkfoods':
+      $('#work-slide').slick('slickGoTo', 4);
+      break;      
+    default:
+      break;
+  }
 }
