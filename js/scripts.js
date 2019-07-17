@@ -111,6 +111,9 @@ function goToWorkItem(name) {
       break;
     case 'arkfoods':
       $('#work-slide').slick('slickGoTo', 4);
+      break;
+      case 'hifi':
+      $('#work-slide').slick('slickGoTo', 5);
       break;      
     default:
       break;
