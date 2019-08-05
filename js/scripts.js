@@ -53,6 +53,15 @@ $(document).ready(function() {
     case '#workSubpages':
       openPopup(workSubpages);
       break;
+    case '#otherhalf':
+    case '#kettner':
+    case '#alma':
+    case '#flex':
+    case '#arkfoods':
+    case '#hifi':
+      const workItem = dest.substring(1);
+      goToWorkItem(workItem);
+      break;
     default:
       break;
   }
@@ -112,7 +121,7 @@ function goToWorkItem(name) {
     case 'arkfoods':
       $('#work-slide').slick('slickGoTo', 4);
       break;
-      case 'hifi':
+    case 'hifi':
       $('#work-slide').slick('slickGoTo', 5);
       break;
     default:
