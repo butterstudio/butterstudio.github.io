@@ -97,16 +97,16 @@ function closePopup() {
 function goToWorkItem(name) {
   openPopup(workSubpages);
   switch (name) {
-    case 'kettner':
+    case 'otherhalf':
       $('#work-slide').slick('slickGoTo', 0);
       break;
-    case 'alma':
+    case 'kettner':
       $('#work-slide').slick('slickGoTo', 1);
       break;
-    case 'flex':
+    case 'alma':
       $('#work-slide').slick('slickGoTo', 2);
       break;
-    case 'otherhalf':
+    case 'flex':
       $('#work-slide').slick('slickGoTo', 3);
       break;
     case 'arkfoods':
@@ -114,7 +114,7 @@ function goToWorkItem(name) {
       break;
       case 'hifi':
       $('#work-slide').slick('slickGoTo', 5);
-      break;      
+      break;
     default:
       break;
   }
