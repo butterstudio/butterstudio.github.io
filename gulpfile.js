@@ -43,6 +43,7 @@ gulp.task('build-work-subpages-html', function () {
   const otherhalf = fs.readFileSync('html/work-subpages/_otherhalf.html', 'utf8');
   const arkfoods = fs.readFileSync('html/work-subpages/_arkfoods.html', 'utf8');
   const hifi = fs.readFileSync('html/work-subpages/_hifi.html', 'utf8');
+  const buddish = fs.readFileSync('html/work-subpages/_buddish.html', 'utf8');
   return gulp.src('html/work-subpages/_work-subpages.html')
     .pipe(template({
       alma,
@@ -50,7 +51,8 @@ gulp.task('build-work-subpages-html', function () {
       flex,
       otherhalf,
       arkfoods,
-      hifi
+      hifi,
+      buddish
     }))
     .pipe(htmlbeautify(beautifyOptions))
     .pipe(gulp.dest('html/'));
