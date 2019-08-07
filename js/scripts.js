@@ -128,6 +128,9 @@ function goToWorkItem(name) {
     case 'buddish':
       $('#work-slide').slick('slickGoTo', 6);
       break;  
+    case 'dego':
+      $('#work-slide').slick('slickGoTo', 7);
+      break;        
     default:
       break;
   }
