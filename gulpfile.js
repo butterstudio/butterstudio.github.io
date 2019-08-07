@@ -20,7 +20,6 @@ const beautifyOptions = {
   'indent_size': 2
 };
 
-
 gulp.task('build-css', function() {
 	return gulp
 		.src(sassConfig.inputDirectory)
@@ -36,7 +35,7 @@ gulp.task('build-css', function() {
 		.pipe(gulp.dest(sassConfig.outputDirectory));
 });
 
-gulp.task('build-work-subpages-html', function () {
+gulp.task('build-work-subpages-html', function() {
   const alma = fs.readFileSync('html/work-subpages/_alma.html', 'utf8');
   const flex = fs.readFileSync('html/work-subpages/_flex.html', 'utf8');
   const kettner = fs.readFileSync('html/work-subpages/_kettner.html', 'utf8');
@@ -87,12 +86,14 @@ gulp.task('build-html', function() {
     .pipe(gulp.dest('./'))
 });
 
-gulp.task('watch', function() {
+gulp.task('watch-internal', function() {
 	gulp.watch('sass/*/*.scss', gulp.series('build-css'));
   gulp.watch('html/*.html', gulp.series('build-html'));
   gulp.watch('html/work-subpages/*.html', gulp.series('build-work-subpages-html'));
   gulp.watch('index.html', gulp.series('validate-html'));
 });
+
+gulp.task('watch', gulp.series('build-css', 'build-html', 'build-work-subpages-html', 'watch-internal'));
 
 const ERRORS_TO_IGNORE = [
   'Duplicate ID',
