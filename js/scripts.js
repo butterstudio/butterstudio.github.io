@@ -60,6 +60,7 @@ $(document).ready(function() {
     case '#arkfoods':
     case '#hifi':
     case '#buddish':
+    case '#dego':
       const workItem = dest.substring(1);
       goToWorkItem(workItem);
       break;
@@ -124,13 +125,13 @@ function goToWorkItem(name) {
       break;
     case 'hifi':
       $('#work-slide').slick('slickGoTo', 5);
-      break;      
+      break;
     case 'buddish':
       $('#work-slide').slick('slickGoTo', 6);
-      break;  
+      break;
     case 'dego':
       $('#work-slide').slick('slickGoTo', 7);
-      break;        
+      break;
     default:
       break;
   }
