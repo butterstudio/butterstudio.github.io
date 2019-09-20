@@ -61,6 +61,7 @@ $(document).ready(function() {
     case '#hifi':
     case '#buddish':
     case '#dego':
+    case '#flores':
       const workItem = dest.substring(1);
       goToWorkItem(workItem);
       break;
@@ -132,6 +133,9 @@ function goToWorkItem(name) {
     case 'dego':
       $('#work-slide').slick('slickGoTo', 7);
       break;
+    case 'flores':
+      $('#work-slide').slick('slickGoTo', 8);
+      break;      
     default:
       break;
   }
